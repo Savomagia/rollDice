@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <title>Roll Dice</title>
+</head>
+<body>
+
+    <section>
+        <section class="hero is-medium is-primary is-bold">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                    Roll a dice!
+                </h1>
+                <h2 class="subtitle">
+                  Can save your life!
+                
+                </h2>
+              </div>
+            </div>
+          </section>
+        <div class="card">
+                    <div class="columns is-flex-desktop">
+                        <div class="column is-4 is-offset-1 ">
+                            <div class="column button is-info is-rounded is-7 mb-1" id="d4">d4 <span class="icon">
+                                <ion-icon name="dice-outline"></ion-icon>
+                              </span></div>
+                            <div class="column button is-danger is-rounded is-7 mb-1" id="d6">d6 <span class="icon">
+                                <ion-icon name="dice-outline"></ion-icon>
+                              </span></div>
+                            <div class="column button is-light is-rounded is-7 mb-1" id="d8">d8 <span class="icon">
+                                <ion-icon name="dice-outline"></ion-icon>
+                              </span></div>
+                            <div class="column button is-dark is-rounded is-7 mb-1" id="d10">d10 <span class="icon">
+                                <ion-icon name="dice-outline"></ion-icon>
+                              </span></div>
+                            <div class="column button is-warning is-rounded is-7 mb-1" id="d12">d12 <span class="icon">
+                                <ion-icon name="dice-outline"></ion-icon>
+                              </span></div>
+                            <div class="column button is-success is-rounded is-7" id="d20">d20 <span class="icon">
+                                <ion-icon name="dice-outline"></ion-icon>
+                              </span></div>
+                            <br>
+                            <div class="column button is-5 is-offset-1 is-link is-rounded is-outlined" id="clear">clear</div>
+                        </div>
+                         
+                    </div>         
+        </div>
+        <div class="box column" id="log">
+            <ul class="is-size-1 column is-3 is-offset-2" id="scorelog">
+
+            </ul>
+        </div> 
+    </section>
+    
+    
+    <script src="dice.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+</html>
