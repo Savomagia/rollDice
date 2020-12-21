@@ -1,0 +1,87 @@
+const d4 = {
+    count: 0,
+    click: document.querySelector('#d4')
+}
+const d6 = {
+    count: 0,
+    click: document.querySelector('#d6')
+}
+const d8 = {
+    count: 0,
+    click: document.querySelector('#d8')
+}
+const d10 = {
+    count: 0,
+    click: document.querySelector('#d10')
+}
+const d12 = {
+    count: 0,
+    click: document.querySelector('#d12')
+}
+const d20 = {
+    count: 0,
+    click: document.querySelector('#d20')
+}
+
+const scorelog = document.querySelector("#scorelog");
+const del = document.querySelector("#clear");
+
+d4.click.addEventListener('click', function() {
+    d4.count += 1;
+    console.log(d4.count)
+    roll(d4.count, 4)
+})
+
+d6.click.addEventListener('click', function() {
+    d6.count += 1;
+    console.log(d6.count)
+    roll(d6.count, 6)
+})
+
+d8.click.addEventListener('click', function() {
+    d8.count += 1;
+    console.log(d8.count)
+    roll(d8.count, 8)
+})
+
+d10.click.addEventListener('click', function() {
+    d10.count += 1;
+    console.log(d10.count)
+    roll(d10.count, 10)
+})
+
+d12.click.addEventListener('click', function() {
+    d12.count += 1;
+    console.log(d12.count)
+    roll(d12.count, 12)
+})
+
+d20.click.addEventListener('click', function() {
+    d20.count += 1;
+    console.log(d20.count)
+    roll(d20.count, 20)
+})
+
+del.addEventListener('click', clear)
+
+function roll(count, num) {
+    die = Math.floor(Math.random() * num)+ 1;
+    result = count * die
+    //alert(`You scored: ${result}`)
+    let score = document.createElement('li')
+    score.append(result)
+    scorelog.append(score)
+    reset();
+   
+}
+
+function reset() {
+    for (let d of [d4, d6, d8, d10, d12, d20]) {
+        d.count = 0;        
+    }
+}
+
+function clear() {
+    let l = document.querySelector("li");// I can clear only one I cannot clear all. does not take querySelectorAll
+    l.remove()
+}
